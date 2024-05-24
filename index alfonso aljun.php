@@ -97,13 +97,16 @@ $row = mysqli_fetch_assoc($result);
         <p class="fs-5">Know me more.</p>
         <ul class="nav nav-pills flex-column">
           <li class="nav-item">
-            <a class="nav-link  color-bg color-text" href="#">Portfolio</a>
+            <a class="nav-link  color-bg color-text" href="#">Email, Passwords and Retype-Password</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="#">Linked In</a>
+            <a class="nav-link text-dark" href="#"><?php echo $row["email"];?></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="#">KnowMe App</a>
+            <a class="nav-link text-dark" href="#"><?php echo $row["password"];?></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#"><?php echo $row["retypePassword"];?></a>
           </li>
         </ul>
         <hr class="d-sm-none">
