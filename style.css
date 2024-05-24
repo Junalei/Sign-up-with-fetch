@@ -3,7 +3,7 @@
 
 
 body{
-    font-family: Poppins;
+    font-family: 'Poppins';
     background-image: url(https://images.unsplash.com/photo-1659256297426-cb50e6a36fd8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-position: center;
     background-size: cover;
@@ -14,6 +14,7 @@ body{
 }
 
 .container{
+    font-family: 'Poppins';
     padding: 16px;
     background-color: rgb(117, 55, 55);
     width: 500px;

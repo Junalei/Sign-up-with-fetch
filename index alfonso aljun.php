@@ -1,5 +1,9 @@
 <?php
 require('connect.php');
+require('phpFunctions.php');
+
+$result = display_data();
+$row = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +55,7 @@ require('connect.php');
   <pre>
   </pre>
   <h1>My Personal Portfolio</h1>
-  <p>Aljunalei's Portfolio</p> 
+  <h2><?php echo $row["firstName"];?> <?php echo $row["lastName"];?></h2> 
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
@@ -84,7 +88,7 @@ require('connect.php');
           <h2 class="fs-1">About Me</h2>
           <h5 class="fs-5">Profile:</h5>
           <img src="Profile.png" class="rounded-circle" alt="Cat Pic">
-          <p class="text-center fs-5">My name is Aljun, I like to code.</p>
+          <p class="text-center fs-5">My name is <?php echo $row["firstName"];?>, I like to code.</p>
         </div>
       </div>
       

@@ -1,5 +1,7 @@
 <?php
 require('connect.php');
+require('phpFunctions.php');
+
 if(isset($_POST['submit']))
 {
 $firstName=$_POST['firstName'];
@@ -7,10 +9,14 @@ $lastName = $_POST ['lastName'];
 $email = $_POST ['email'];
 $password =$_POST['password'];
 $retypePassword = $_POST['retypePassword'];
-$sql = "INSERT INTO users VALUES('$firstName','$lastName','$email','$password','$retypePassword')";
-mysqli_query($con, $sql);
+
+insert_data($firstName,$lastName,$email,$password,$retypePassword);
+
 echo
     "<script>alert('Data is inserted successfully');</script>";
+
+    header("Location: index alfonso aljun.php");
+    exit();
 
 }
 ?>
@@ -21,7 +27,7 @@ echo
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" >
 </head>
 <body>
     <div class="container">

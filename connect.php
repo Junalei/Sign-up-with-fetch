@@ -7,7 +7,7 @@ $database = 'ccs06';
 $con = mysqli_connect($hostname,$username,$password,$database);
 if ($con)
 {
-echo "Connection is successful";
+//echo "Connection is successful";
 }
 else
 {
